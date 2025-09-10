@@ -1,11 +1,4 @@
-<!--Header-->
-<template>
-<div class="h-container">
-  <header>
-
-      <!--Titre-->
-   <div class="text">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Cercle extérieur avec dégradé -->
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -26,31 +19,3 @@
   <circle cx="60" cy="45" r="3" fill="url(#grad1)"/>
   <circle cx="60" cy="75" r="3" fill="url(#grad1)"/>
 </svg>
-
-    <h1>Archange Yebouet</h1>
-   </div>
-
-     <!--Navigations-->
-
-         <!--Navigation1-->
-   <nav>
-   <ul>
-    <li>  <NuxtLink to="/">A Propos de moi</NuxtLink></li>
-    <li>  <NuxtLink to="/">Projets</NuxtLink></li>
-    <li>  <NuxtLink to="/">Experience</NuxtLink></li>
-    <li>   <NuxtLink to="/about">FAQ</NuxtLink></li>
-   </ul>
-   </nav>
-            <!--Navigation2-->
-   <nav>
-   <ul class="lien">
-    <li><NuxtLink to="/about">Entrez en contact</NuxtLink></li>
-   </ul>  
-   </nav>
-</header>
-</div>
-</template>
-<style lang="scss">
-@import '@/assets/scss/header';
-
-</style>
