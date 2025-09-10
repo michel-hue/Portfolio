@@ -1,6 +1,34 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtPage />
+  <div class="mon-gradient">
+    <Header />
+
+    <main>
+      <NuxtPage />
+    </main>
+    <Footer /> 
   </div>
 </template>
+<style lang="scss">
+.mon-gradient {
+  width: 100%;
+  height: 1000px;
+  background-color: #000000; 
+  background-image: radial-gradient(
+    ellipse 70% 50% at top center, 
+    #da0b0b 0%,       
+    #a00808 40%,      
+    #000000 100%       
+  );
+}
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+}
+
+</style>
+

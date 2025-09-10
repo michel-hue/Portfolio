@@ -1,0 +1,56 @@
+$primary-color: #da0b0b;
+$background: black;
+$color-text: white;
+$button-color: rgba(248, 245, 245, 0.173);
+
+
+.h-container {
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+
+        .text {
+            h1 {
+                font-size: 20px;
+                margin-left: 50px;
+            }
+        }
+
+        nav {
+            margin-right: 50px;
+                            .lien{
+                    background-color: rgba(0,0,0,0);
+                }
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                gap: 50px;
+                background-color: $button-color;
+                width: fit-content;
+                height: fit-content;
+                padding: 15px;
+                border: 1px solid $button-color;
+                border-radius: 9999px;
+
+
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $color-text;
+
+                        &:hover{
+                            color: $background;
+                        }
+                        &:active{
+                            color: $background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

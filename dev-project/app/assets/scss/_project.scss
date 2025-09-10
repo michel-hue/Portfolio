@@ -1,0 +1,117 @@
+$primary-color: #da0b0b;
+$background: black;
+$color-text: white;
+$button-color: rgba(248, 245, 245, 0.173);
+$box-shadown: rgba(0,0,0,0.4), -2px -5px 10px rgba(0,0,0,0.1);
+$linear-background: linear-gradient(
+          0deg, rgba(0,0,0,0.7) 10%,
+          rgba(255,255,255,0) 100%
+        );
+
+//Container de project
+.p-container {
+  margin-top: 50px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  //Galerie
+  .galery {
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  height: auto; 
+  gap: 20px;
+  transition: 0.3s;
+
+    &:hover {
+      gap: 0;
+    }
+
+    li {
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 350px; 
+      height: 450px;  
+      border-radius: 20%; 
+      cursor: pointer;
+      border: 1.5px solid $color-text;
+      box-shadow: 5px 10px 15px $box-shadown;
+      transition: flex 0.5s ease, transform 0.5s ease;
+
+      &:hover {
+        flex: 0 1 480px; 
+        height: 500px;   
+        transform: scale(1.05);
+        z-index: 10;
+        opacity: 1;
+
+        .content {
+          opacity: 1;
+          visibility: visible;
+
+          span {
+            transform: translate(-50%,0) scale(1);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        transition: transform 0.4s ease;
+      }
+
+      .content {
+        transition: 1.5s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        color: $color-text;
+        padding: 15px;
+        background: $linear-background;
+        opacity: 0;
+        visibility: hidden;
+
+        span {
+          text-align: center;
+          width: 75%;
+          position: absolute;
+          z-index: 3;
+          left: 50%;
+          bottom: 0px;
+          transform: translate(-50%,0) scale(0.85);
+          visibility: hidden;
+          opacity: 0;
+
+          h2 {
+            font-weight: bold;
+            font-size: 22px; 
+            margin-bottom: 5px;
+            white-space: nowrap;
+            color: $primary-color;
+          }
+
+          p {
+            color: $color-text;
+            font-size: 12px; 
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

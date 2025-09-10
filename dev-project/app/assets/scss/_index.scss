@@ -1,0 +1,29 @@
+$primary-color: #da0b0b;
+$background: black;
+$color-text: white;
+$button-color: rgba(248, 245, 245, 0.173);
+
+
+.container{
+  overflow: hidden;
+  .text{
+  h4{
+    text-align: center;
+  }
+}
+.presentation{
+  h1{
+    text-align: center;
+    font-size: 60px;
+  }
+  button{
+    padding: 15px;
+    display: flex;
+    margin: auto;
+    background-color: $primary-color;
+    color: $color-text;
+    border-radius: 9999px;
+    border: 1px solid $button-color;
+  }
+}
+}
