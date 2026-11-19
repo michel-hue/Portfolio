@@ -1,0 +1,153 @@
+/* ---- Hero ---- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-12);
+  padding-top: 96px;
+  padding-bottom: var(--space-32);
+}
+
+.heroText {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+
+.heroCard {
+  flex: 1 1 420px;
+  display: flex;
+}
+
+.heroCard > * {
+  flex: 1;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.identityText {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.role {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-subtle);
+}
+
+.intro {
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* ---- À propos ---- */
+
+.about {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.aboutInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  padding-block: var(--space-32);
+}
+
+.aboutText {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.more {
+  align-self: flex-start;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stackLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+}
+
+/* ---- Contact ---- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding-block: var(--space-32);
+  text-align: center;
+}
+
+.contactTitle {
+  max-width: 640px;
+}
+
+.contactText {
+  max-width: 520px;
+}
+
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: var(--space-16);
+    padding-bottom: 96px;
+  }
+  .aboutInner,
+  .contact {
+    padding-block: 96px;
+  }
+}

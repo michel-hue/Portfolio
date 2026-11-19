@@ -1,0 +1,13 @@
+.band {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding-block: 96px;
+}

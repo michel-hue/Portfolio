@@ -1,0 +1,26 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--ink);
+}
+
+.md {
+  font-size: 22px;
+}
+
+.sm {
+  font-size: 14px;
+  min-height: 0;
+}
+
+.dot {
+  color: var(--accent);
+}

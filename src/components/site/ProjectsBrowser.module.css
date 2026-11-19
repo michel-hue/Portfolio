@@ -1,0 +1,23 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+
+.count {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-subtle);
+}
+
+.item {
+  display: flex;
+}
+
+.item > * {
+  flex: 1;
+}

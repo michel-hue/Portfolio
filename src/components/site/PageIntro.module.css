@@ -1,0 +1,18 @@
+/* En-tête de page partagé (Projets, détail projet). */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: 96px;
+  padding-bottom: var(--space-16);
+}
+
+.lead {
+  max-width: 560px;
+}
+
+@media (max-width: 640px) {
+  .intro {
+    padding-top: var(--space-16);
+  }
+}

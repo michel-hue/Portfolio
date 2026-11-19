@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: var(--space-4) var(--space-4) var(--space-6);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--ink);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-raised);
+}
+
+.home {
+  padding-bottom: 28px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  padding-inline: var(--space-2);
+}
+
+.home .body {
+  padding-inline: var(--space-3);
+}
+
+.title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding-inline: var(--space-2);
+}
+
+.home .actions {
+  padding-inline: var(--space-3);
+}
+
+/* Grille de cartes partagée (accueil et page Projets). */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+}
