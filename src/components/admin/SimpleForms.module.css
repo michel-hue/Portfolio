@@ -1,0 +1,99 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3) var(--space-4);
+}
+
+.submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: 28px;
+}
+
+.tiny {
+  flex: 0 0 96px;
+}
+
+.small {
+  flex: 1 1 160px;
+  max-width: 220px;
+}
+
+.narrow {
+  flex: 1 1 200px;
+  max-width: 320px;
+}
+
+.wide {
+  flex: 3 1 320px;
+}
+
+/* Bloc d'un groupe / d'une ligne dans les listes. */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.blockHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0 0 var(--space-6);
+  list-style: none;
+  border-left: 1px solid var(--line);
+}
+
+.skillRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+}
+
+.skillRow > form {
+  flex: 1 1 auto;
+}
+
+.skillDelete {
+  padding-top: 28px;
+}
+
+.details > summary {
+  cursor: pointer;
+  color: var(--ink-muted);
+  font-size: 14px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.details[open] > summary {
+  margin-bottom: var(--space-4);
+}

@@ -1,0 +1,5 @@
+.dot {
+  display: inline-block;
+  color: var(--accent);
+  animation: dot-in 500ms var(--ease-out) 600ms both;
+}

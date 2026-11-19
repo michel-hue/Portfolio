@@ -1,0 +1,37 @@
+.portrait {
+  position: relative;
+  flex: 1 1 300px;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+
+.home {
+  max-width: 400px;
+  background: var(--surface-raised);
+}
+
+.about {
+  max-width: 420px;
+  background: var(--surface);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.monogram {
+  color: var(--ink-subtle);
+  font-size: 96px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.dot {
+  color: var(--accent);
+}

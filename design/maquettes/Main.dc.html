@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Archange YEBOUET — Accueil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1f1c19}
+a{color:#e3997e;transition:color 150ms cubic-bezier(.22,1,.36,1)}a:hover{color:#efe9e1}
+.nav-link{color:#b7aea3;text-decoration:none}.nav-link:hover{color:#efe9e1}
+.btn-primary{transition:background 150ms cubic-bezier(.22,1,.36,1)}
+.btn-primary:hover{background:#efe9e1!important;color:#2a150c!important}
+.btn-ghost{transition:border-color 150ms,color 150ms}
+.btn-ghost:hover{border-color:#efe9e1!important;color:#efe9e1!important}
+.card{transition:transform 300ms cubic-bezier(.22,1,.36,1),box-shadow 300ms cubic-bezier(.22,1,.36,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.chip{transition:background 150ms,color 150ms,border-color 150ms}
+.chip:hover{border-color:#7f766c!important}
+.chip[aria-pressed="true"]{background:#efe9e1!important;color:#1f1c19!important;border-color:#efe9e1!important}
+.field{transition:border-color 150ms}
+.field:focus{outline:2px solid #e3997e;outline-offset:2px}
+.field[data-invalid="true"]{border-color:#f2a39b!important}
+@keyframes dotin{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.dot{display:inline-block;animation:dotin 500ms cubic-bezier(.22,1,.36,1) 600ms both}
+.rise{animation:rise 700ms cubic-bezier(.22,1,.36,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div style="font-family: Geist, system-ui, sans-serif; color: #efe9e1; background: #1f1c19; min-height: 100vh">
+
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 24px">
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 8px 8px 24px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px">
+<a href="Main.dc.html" class="nav-link" style="font-size: 22px; font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="Main.dc.html" class="nav-link" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #efe9e1"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: #e3997e"></span>Accueil</a>
+<a href="Projets.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">Projets</a>
+<a href="APropos.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">À propos</a>
+<a href="Contact.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Me contacter</a>
+</nav>
+</header>
+</div>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 96px clamp(16px, 5vw, 64px) 128px; display: flex; flex-wrap: wrap; gap: 48px; align-items: stretch">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; justify-content: center; gap: 28px">
+<div style="display: flex; align-items: center; gap: 16px">
+<div aria-hidden="true" style="width: 56px; height: 56px; border-radius: 16px; background: #e3997e; color: #2a150c; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">a.</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 16px; line-height: 26px; font-weight: 600">Archange YEBOUET</span>
+<span style="font-size: 14px; line-height: 22px; color: #9e958a">Développeur web et mobile · Abidjan</span>
+</div>
+</div>
+<h1 style="margin: 0; font-size: 64px; line-height: 68px; font-weight: 600; letter-spacing: -0.035em">Je construis des produits web nets<span class="dot" style="color: #e3997e">.</span></h1>
+<p style="margin: 0; max-width: 480px; font-size: 18px; line-height: 30px; color: #b7aea3">De la base de données à l'interface, je livre des applications simples à utiliser et simples à maintenir.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#s-projets" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #e3997e; color: #2a150c; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir les projets
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; font-size: 15px; font-weight: 500; text-decoration: none; color: #efe9e1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"></path><path d="m7 10 5 5 5-5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg>Télécharger le CV</a>
+</div>
+</div>
+
+<div class="card" style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 28px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px; color: #efe9e1; text-decoration: none">
+<div style="position: relative; height: 300px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture du projet · 16:10]</span>
+<span style="position: absolute; top: 16px; left: 16px; font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #3d2b22; color: #e3997e">En vedette</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 12px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">01</span> — API</p>
+<h2 style="margin: 0; font-size: 30px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em">API de réservation de terrains</h2>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">API REST avec authentification et documentation Swagger.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">NestJS</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">PostgreSQL</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px">
+<a href="[URL de l'app]" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="s-projets" style="max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 64px) 128px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">02</span> — Projets</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">Autres projets</h2>
+</div>
+<div role="group" aria-label="Filtrer les projets" style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #efe9e1; background: #efe9e1; color: #1f1c19; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Tous</button>
+<button type="button" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #3a352f; background: #2d2924; color: #b7aea3; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Web</button>
+<button type="button" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #3a352f; background: #2d2924; color: #b7aea3; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">API</button>
+<button type="button" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #3a352f; background: #2d2924; color: #b7aea3; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Mobile</button>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+<div class="card" style="display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 28px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px; color: #efe9e1; text-decoration: none">
+<div style="height: 220px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture]</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 12px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">03</span> — Web</p>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Nom du projet]</h3>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que le projet fait, en une phrase concrète.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">React</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">TypeScript</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px">
+<a href="[URL de l'app]" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 28px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px; color: #efe9e1; text-decoration: none">
+<div style="height: 220px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture]</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 12px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">04</span> — API</p>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Nom du projet]</h3>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que le projet fait, en une phrase concrète.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Node.js</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">PostgreSQL</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px">
+<a href="[URL de l'app]" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 28px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px; color: #efe9e1; text-decoration: none">
+<div style="height: 220px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture]</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 12px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">05</span> — Mobile</p>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Nom du projet]</h3>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que le projet fait, en une phrase concrète.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">React Native</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px">
+<a href="[URL de l'app]" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 28px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px; color: #efe9e1; text-decoration: none">
+<div style="height: 220px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture]</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 12px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">06</span> — Web</p>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Nom du projet]</h3>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que le projet fait, en une phrase concrète.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Next.js</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Tailwind CSS</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 12px">
+<a href="[URL de l'app]" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: center"><a href="Projets.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Voir tous les projets <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+</section>
+
+<section id="s-apropos" style="background: #26221e; border-top: 1px solid #3a352f; border-bottom: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding: 128px clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 300px; aspect-ratio: 4 / 5; max-width: 400px; border-radius: 16px; background: #2d2924; border: 1px solid #3a352f; display: flex; align-items: center; justify-content: center">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Ton portrait]</span>
+</div>
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">03</span> — À propos</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">Basé à Abidjan, je travaille partout.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: #b7aea3">[Deux ou trois phrases : ton parcours, ce que tu aimes construire, la façon dont tu travailles avec une équipe.]</p>
+<a href="APropos.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none">En savoir plus sur moi <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #9e958a">Stack</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">React</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">Next.js</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">TypeScript</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">NestJS</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">PostgreSQL</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #2d2924; border: 1px solid #3a352f; color: #b7aea3">Docker</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="s-contact" style="max-width: 1120px; margin: 0 auto; padding: 128px clamp(16px, 5vw, 64px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">04</span> — Contact</p>
+<h2 style="margin: 0; max-width: 640px; font-size: 64px; line-height: 68px; font-weight: 600; letter-spacing: -0.035em">Un projet en tête ?</h2>
+<p style="margin: 0; max-width: 520px; font-size: 18px; line-height: 30px; color: #b7aea3">Écris-moi : je réponds sous 48 h, avec des questions précises.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 8px">
+<a href="Contact.dc.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #e3997e; color: #2a150c; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>Écrire un message</a>
+<a href="#" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">GitHub</a>
+<a href="#" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">LinkedIn</a>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 22px; color: #9e958a">
+<a href="Main.dc.html" class="nav-link" style="font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Liens secondaires" style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Main.dc.html" class="nav-link">Accueil</a>
+<a href="Projets.dc.html" class="nav-link">Projets</a>
+<a href="APropos.dc.html" class="nav-link">À propos</a>
+<a href="Contact.dc.html" class="nav-link">Contact</a>
+<a href="#" class="nav-link">GitHub</a>
+<a href="#" class="nav-link">LinkedIn</a>
+</nav>
+<span>© 2026 Archange YEBOUET · Fait à Abidjan</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 3100}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

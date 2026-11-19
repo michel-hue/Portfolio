@@ -1,0 +1,142 @@
+/* ---- En-tête ---- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  padding-top: 96px;
+  padding-bottom: var(--space-32);
+}
+
+.heroText {
+  flex: 1 1 440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-muted);
+}
+
+.detail {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.availableDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+/* ---- A — Compétences ---- */
+
+.skills {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.skillsInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-block: var(--space-32);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-6);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+/* ---- B — Parcours ---- */
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding-block: var(--space-32);
+}
+
+.timelineSide {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.rows {
+  flex: 2 1 480px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-subtle);
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: var(--space-16);
+    padding-bottom: 96px;
+  }
+  .skillsInner,
+  .timeline {
+    padding-block: 96px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}

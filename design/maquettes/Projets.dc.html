@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Archange YEBOUET — Projets</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1f1c19}
+a{color:#e3997e;transition:color 150ms cubic-bezier(.22,1,.36,1)}a:hover{color:#efe9e1}
+.nav-link{color:#b7aea3;text-decoration:none}.nav-link:hover{color:#efe9e1}
+.btn-primary{transition:background 150ms cubic-bezier(.22,1,.36,1)}
+.btn-primary:hover{background:#efe9e1!important;color:#2a150c!important}
+.btn-ghost{transition:border-color 150ms,color 150ms}
+.btn-ghost:hover{border-color:#efe9e1!important;color:#efe9e1!important}
+.card{transition:transform 300ms cubic-bezier(.22,1,.36,1),box-shadow 300ms cubic-bezier(.22,1,.36,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.chip{transition:background 150ms,color 150ms,border-color 150ms}
+.chip:hover{border-color:#7f766c!important}
+.chip[aria-pressed="true"]{background:#efe9e1!important;color:#1f1c19!important;border-color:#efe9e1!important}
+.field{transition:border-color 150ms}
+.field:focus{outline:2px solid #e3997e;outline-offset:2px}
+.field[data-invalid="true"]{border-color:#f2a39b!important}
+@keyframes dotin{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.dot{display:inline-block;animation:dotin 500ms cubic-bezier(.22,1,.36,1) 600ms both}
+.rise{animation:rise 700ms cubic-bezier(.22,1,.36,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div style="font-family: Geist, system-ui, sans-serif; color: #efe9e1; background: #1f1c19; min-height: 100vh">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 24px">
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 8px 8px 24px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px">
+<a href="Main.dc.html" class="nav-link" style="font-size: 22px; font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="Main.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">Accueil</a>
+<a href="Projets.dc.html" class="nav-link" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #efe9e1"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: #e3997e"></span>Projets</a>
+<a href="APropos.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">À propos</a>
+<a href="Contact.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Me contacter</a>
+</nav>
+</header>
+</div>
+<section style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 96px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 24px">
+<div class="rise"><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">02</span> — Projets</p></div>
+<h1 class="rise" style="margin: 0; font-size: 64px; line-height: 68px; font-weight: 600; letter-spacing: -0.035em">Tous mes projets<span class="dot" style="color: #e3997e">.</span></h1>
+<p class="rise" style="margin: 0; font-size: 18px; line-height: 30px; color: #b7aea3; max-width: 560px">Applications web, applications mobiles et API. Chaque projet a un lien direct vers l'app en ligne.</p>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-bottom: 128px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid #3a352f">
+<div role="group" aria-label="Filtrer les projets" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+<button type="button" class="chip" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #3a352f; background: #2d2924; color: #b7aea3; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">{{f.label}}</button>
+</sc-for>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 14px; line-height: 22px; color: #9e958a">{{countLabel}}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px">
+<sc-for list="{{visible}}" as="p" hint-placeholder-count="6">
+<div class="card" style="display: flex; flex-direction: column; gap: 20px; padding: 16px 16px 24px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px">
+<div style="position: relative; height: 200px; border-radius: 10px; background: #26221e; display: flex; align-items: center; justify-content: center">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Capture]</span>
+<sc-if value="{{p.featured}}" hint-placeholder-val="{{false}}"><span style="position: absolute; top: 16px; left: 16px; font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3; background: #3d2b22; color: #e3997e">En vedette</span></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 8px; flex-grow: 1">
+<p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">{{p.num}}</span> — {{p.cat}}</p>
+<h2 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">{{p.title}}</h2>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">{{p.desc}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{p.tags}}" as="t" hint-placeholder-count="2"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">{{t}}</span></sc-for>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding: 0 8px">
+<a href="{{p.app}}" target="_blank" rel="noopener" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #e3997e; color: #e3997e; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Ouvrir l'app <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+<a href="Projet.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #7f766c; color: #efe9e1; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box">Voir le projet</a>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="background: #26221e; border-top: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 96px; padding-bottom: 96px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">Un projet en tête ?</h2>
+<a href="Contact.dc.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 10px; border: 0; background: #e3997e; color: #2a150c; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Me contacter <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</section>
+<footer style="border-top: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 22px; color: #9e958a">
+<a href="Main.dc.html" class="nav-link" style="font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Liens secondaires" style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Main.dc.html" class="nav-link">Accueil</a>
+<a href="Projets.dc.html" class="nav-link">Projets</a>
+<a href="APropos.dc.html" class="nav-link">À propos</a>
+<a href="Contact.dc.html" class="nav-link">Contact</a>
+<a href="#" class="nav-link">GitHub</a>
+<a href="#" class="nav-link">LinkedIn</a>
+</nav>
+<span>© 2026 Archange YEBOUET · Fait à Abidjan</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 1900}}'>
+class Component extends DCLogic {
+state = { filter: 'Tous' };
+renderVals() {
+const projects = [
+{ num: '01', cat: 'API', title: 'API de réservation de terrains', desc: 'API REST avec authentification et documentation Swagger.', tags: ['NestJS', 'PostgreSQL'], app: '#', featured: true },
+{ num: '02', cat: 'Web', title: '[Nom du projet]', desc: '[Ce que le projet fait, en une phrase concrète.]', tags: ['React', 'TypeScript'], app: '#', featured: false },
+{ num: '03', cat: 'Mobile', title: '[Nom du projet]', desc: '[Ce que le projet fait, en une phrase concrète.]', tags: ['React Native'], app: '#', featured: false },
+{ num: '04', cat: 'Web', title: '[Nom du projet]', desc: '[Ce que le projet fait, en une phrase concrète.]', tags: ['Next.js', 'Tailwind CSS'], app: '#', featured: false },
+{ num: '05', cat: 'API', title: '[Nom du projet]', desc: '[Ce que le projet fait, en une phrase concrète.]', tags: ['Node.js', 'PostgreSQL'], app: '#', featured: false },
+{ num: '06', cat: 'Mobile', title: '[Nom du projet]', desc: '[Ce que le projet fait, en une phrase concrète.]', tags: ['Flutter'], app: '#', featured: false }
+];
+const current = this.state.filter;
+const visible = current === 'Tous' ? projects : projects.filter((p) => p.cat === current);
+const filters = ['Tous', 'Web', 'Mobile', 'API'].map((label) => ({
+label: label,
+pressed: label === current ? 'true' : 'false',
+pick: () => this.setState({ filter: label })
+}));
+const n = visible.length;
+return { filters: filters, visible: visible, countLabel: n + (n > 1 ? ' projets' : ' projet') };
+}
+}
+</script>
+</body>
+</html>

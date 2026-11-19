@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Archange YEBOUET — À propos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1f1c19}
+a{color:#e3997e;transition:color 150ms cubic-bezier(.22,1,.36,1)}a:hover{color:#efe9e1}
+.nav-link{color:#b7aea3;text-decoration:none}.nav-link:hover{color:#efe9e1}
+.btn-primary{transition:background 150ms cubic-bezier(.22,1,.36,1)}
+.btn-primary:hover{background:#efe9e1!important;color:#2a150c!important}
+.btn-ghost{transition:border-color 150ms,color 150ms}
+.btn-ghost:hover{border-color:#efe9e1!important;color:#efe9e1!important}
+.card{transition:transform 300ms cubic-bezier(.22,1,.36,1),box-shadow 300ms cubic-bezier(.22,1,.36,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.chip{transition:background 150ms,color 150ms,border-color 150ms}
+.chip:hover{border-color:#7f766c!important}
+.chip[aria-pressed="true"]{background:#efe9e1!important;color:#1f1c19!important;border-color:#efe9e1!important}
+.field{transition:border-color 150ms}
+.field:focus{outline:2px solid #e3997e;outline-offset:2px}
+.field[data-invalid="true"]{border-color:#f2a39b!important}
+@keyframes dotin{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.dot{display:inline-block;animation:dotin 500ms cubic-bezier(.22,1,.36,1) 600ms both}
+.rise{animation:rise 700ms cubic-bezier(.22,1,.36,1) both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div style="font-family: Geist, system-ui, sans-serif; color: #efe9e1; background: #1f1c19; min-height: 100vh">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 24px">
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 8px 8px 24px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px">
+<a href="Main.dc.html" class="nav-link" style="font-size: 22px; font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+<a href="Main.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">Accueil</a>
+<a href="Projets.dc.html" class="nav-link" style="display: inline-flex; align-items: center; min-height: 44px">Projets</a>
+<a href="APropos.dc.html" class="nav-link" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #efe9e1"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: #e3997e"></span>À propos</a>
+<a href="Contact.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Me contacter</a>
+</nav>
+</header>
+</div>
+<section style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 96px; padding-bottom: 128px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 300px; max-width: 420px; aspect-ratio: 4 / 5; border-radius: 16px; background: #26221e; border: 1px solid #3a352f; display: flex; align-items: center; justify-content: center">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #9e958a">[Ton portrait]</span>
+</div>
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 24px">
+<div class="rise"><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">03</span> — À propos</p></div>
+<h1 class="rise" style="margin: 0; font-size: 64px; line-height: 68px; font-weight: 600; letter-spacing: -0.035em">Je suis Archange YEBOUET<span class="dot" style="color: #e3997e">.</span></h1>
+<p class="rise" style="margin: 0; font-size: 18px; line-height: 30px; color: #b7aea3">Développeur web et mobile basé à Abidjan. [Deux ou trois phrases : ton parcours, ce que tu aimes construire, la façon dont tu travailles avec une équipe.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; font-size: 14px; line-height: 22px; color: #b7aea3">
+<span style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Abidjan, Côte d’Ivoire</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: #e3997e"></span>Disponible · [à partir de mois]</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a href="#" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 10px; border: 0; background: #e3997e; color: #2a150c; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"></path><path d="m7 10 5 5 5-5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg>Télécharger le CV</a>
+<a href="Contact.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Me contacter</a>
+</div>
+</div>
+</section>
+
+<section style="background: #26221e; border-top: 1px solid #3a352f; border-bottom: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 128px; padding-bottom: 128px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px"><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">A</span> — Compétences</p><h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">Ce que je fais</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">Web</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">Sites et applications web rapides, accessibles et faciles à maintenir.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">React</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Next.js</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">TypeScript</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Tailwind CSS</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">Mobile</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">Applications iOS et Android à partir d’une seule base de code.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">React Native</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Flutter</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #2d2924; border: 1px solid #3a352f; border-radius: 16px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">Back-end</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">API documentées, données bien modélisées, mise en production.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">NestJS</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Node.js</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">PostgreSQL</span><span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 18px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #26221e; color: #b7aea3">Docker</span></div></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 128px; padding-bottom: 128px; display: flex; flex-wrap: wrap; gap: 64px">
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px"><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #b7aea3"><span style="color: #e3997e">B</span> — Parcours</p><h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">Parcours</h2><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">Le détail complet est dans le CV.</p></div>
+<div style="flex: 2 1 480px; display: flex; flex-direction: column; border-top: 1px solid #3a352f">
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid #3a352f"><span style="font-family: 'Geist Mono', monospace; font-size: 14px; line-height: 22px; color: #9e958a">[2025 — auj.]</span><div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Poste] · [Entreprise]</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que tu y as livré, en une phrase.]</p></div></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid #3a352f"><span style="font-family: 'Geist Mono', monospace; font-size: 14px; line-height: 22px; color: #9e958a">[2023 — 2025]</span><div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Poste] · [Entreprise]</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Ce que tu y as livré, en une phrase.]</p></div></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid #3a352f"><span style="font-family: 'Geist Mono', monospace; font-size: 14px; line-height: 22px; color: #9e958a">[Année]</span><div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em">[Diplôme] · [École]</h3><p style="margin: 0; font-size: 16px; line-height: 26px; color: #b7aea3">[Spécialité.]</p></div></div>
+</div>
+</section>
+
+<section style="background: #26221e; border-top: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 96px; padding-bottom: 96px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<h2 style="margin: 0; font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em">On travaille ensemble ?</h2>
+<a href="Contact.dc.html" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #7f766c; background: transparent; color: #efe9e1; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; box-sizing: border-box; cursor: pointer">Écrire un message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</section>
+<footer style="border-top: 1px solid #3a352f">
+<div style="max-width: 1120px; margin: 0 auto; padding-left: clamp(16px, 5vw, 64px); padding-right: clamp(16px, 5vw, 64px); padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 22px; color: #9e958a">
+<a href="Main.dc.html" class="nav-link" style="font-weight: 600; letter-spacing: -0.04em; color: #efe9e1">archange<span style="color: #e3997e">.</span></a>
+<nav aria-label="Liens secondaires" style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Main.dc.html" class="nav-link">Accueil</a>
+<a href="Projets.dc.html" class="nav-link">Projets</a>
+<a href="APropos.dc.html" class="nav-link">À propos</a>
+<a href="Contact.dc.html" class="nav-link">Contact</a>
+<a href="#" class="nav-link">GitHub</a>
+<a href="#" class="nav-link">LinkedIn</a>
+</nav>
+<span>© 2026 Archange YEBOUET · Fait à Abidjan</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 2500}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

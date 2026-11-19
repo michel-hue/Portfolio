@@ -1,0 +1,20 @@
+.message {
+  align-items: flex-start;
+}
+
+.message[data-unread] {
+  box-shadow: inset 2px 0 0 var(--warning);
+  padding-left: var(--space-4);
+}
+
+.email {
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+.body {
+  max-width: 72ch;
+  color: var(--ink-muted);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
