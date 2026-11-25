@@ -60,6 +60,14 @@ export async function getAdminExperiences() {
     .orderBy(asc(schema.experiences.order), asc(schema.experiences.id));
 }
 
+export async function getAdminCertifications() {
+  await requireAdmin();
+  return db
+    .select()
+    .from(schema.certifications)
+    .orderBy(asc(schema.certifications.order), asc(schema.certifications.id));
+}
+
 export async function getAdminProfile() {
   await requireAdmin();
   const [row] = await db.select().from(schema.profile).limit(1);

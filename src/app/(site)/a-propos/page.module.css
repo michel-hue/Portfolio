@@ -126,12 +126,64 @@
   gap: var(--space-1);
 }
 
+/* ---- C — Certifications ---- */
+
+.certs {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.certsInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-block: var(--space-32);
+}
+
+.certList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cert {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.certIcon {
+  color: var(--accent);
+}
+
+.certText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.certMeta {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-subtle);
+}
+
 @media (max-width: 640px) {
   .hero {
     padding-top: var(--space-16);
     padding-bottom: 96px;
   }
   .skillsInner,
+  .certsInner,
   .timeline {
     padding-block: 96px;
   }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Download, MapPin } from "lucide-react";
+import { Award, Download, ExternalLink, MapPin } from "lucide-react";
 import { AnimatedDot } from "@/components/site/AnimatedDot";
 import { Button } from "@/components/site/Button";
 import { CtaBand } from "@/components/site/CtaBand";
@@ -7,7 +7,7 @@ import { Eyebrow } from "@/components/site/Eyebrow";
 import { Portrait } from "@/components/site/Portrait";
 import { Reveal } from "@/components/site/Reveal";
 import { TagList } from "@/components/site/Tag";
-import { getExperiences, getProfile, getSkillGroups } from "@/lib/queries";
+import { getCertifications, getExperiences, getProfile, getSkillGroups } from "@/lib/queries";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -17,10 +17,11 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const [profile, groups, experiences] = await Promise.all([
+  const [profile, groups, experiences, certifications] = await Promise.all([
     getProfile(),
     getSkillGroups(),
     getExperiences(),
+    getCertifications(),
   ]);
 
   return (
@@ -105,6 +106,38 @@ export default async function AboutPage() {
               </li>
             ))}
           </ol>
+        </section>
+      )}
+
+      {certifications.length > 0 && (
+        <section className={styles.certs} aria-labelledby="certifications">
+          <div className={`container ${styles.certsInner}`}>
+            <div className={styles.heading}>
+              <Eyebrow index="C">Certifications</Eyebrow>
+              <h2 id="certifications" className="h1">
+                Certifications
+              </h2>
+            </div>
+            <ul className={styles.certList}>
+              {certifications.map((cert, i) => (
+                <Reveal key={cert.id} as="li" index={i} className={styles.cert}>
+                  <Award className={styles.certIcon} size={24} strokeWidth={1.75} aria-hidden="true" />
+                  <div className={styles.certText}>
+                    <h3 className="h3">{cert.name}</h3>
+                    <p className={styles.certMeta}>
+                      {[cert.issuer, cert.issuedAt].filter(Boolean).join(" · ")}
+                    </p>
+                    {cert.credentialId && <p className={styles.certMeta}>N° {cert.credentialId}</p>}
+                  </div>
+                  {cert.credentialUrl && (
+                    <Button href={cert.credentialUrl} variant="outline" size="sm" iconEnd={ExternalLink} external>
+                      Vérifier<span className="visually-hidden"> la certification {cert.name}</span>
+                    </Button>
+                  )}
+                </Reveal>
+              ))}
+            </ul>
+          </div>
         </section>
       )}
 

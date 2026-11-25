@@ -10,10 +10,6 @@
     var(--surface);
 }
 
-.hero {
-  height: 300px;
-}
-
 .home {
   height: 220px;
 }
@@ -37,7 +33,6 @@
 }
 
 @media (max-width: 760px) {
-  .hero,
   .home,
   .list {
     height: 200px;

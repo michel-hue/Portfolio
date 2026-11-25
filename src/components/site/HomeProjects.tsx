@@ -13,7 +13,7 @@ import styles from "./HomeProjects.module.css";
 const MAX = 4;
 const ORDER = ["Web", "API", "Mobile"] as const;
 
-/** Accueil, « 02 — Projets / Autres projets » : filtre sans rechargement, 4 cartes max. */
+/** Accueil, « 02 — Projets » : filtre sans rechargement, 4 cartes max. */
 export function HomeProjects({ projects }: { projects: CardProject[] }) {
   const [filter, setFilter] = useState<string>(ALL);
   const categories = availableCategories(ORDER, projects);
@@ -23,12 +23,12 @@ export function HomeProjects({ projects }: { projects: CardProject[] }) {
   );
 
   return (
-    <section id="projets" aria-labelledby="autres-projets" className={`container ${styles.section}`}>
+    <section id="projets" aria-labelledby="projets-titre" className={`container ${styles.section}`}>
       <div className={styles.head}>
         <div className={styles.titles}>
           <Eyebrow index="02">Projets</Eyebrow>
-          <h2 id="autres-projets" className="h1">
-            Autres projets
+          <h2 id="projets-titre" className="h1">
+            Sélection de projets
           </h2>
         </div>
         {categories.length > 1 && (

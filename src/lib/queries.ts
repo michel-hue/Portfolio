@@ -81,3 +81,14 @@ export async function getExperiences() {
     .from(schema.experiences)
     .orderBy(asc(schema.experiences.order), asc(schema.experiences.id));
 }
+
+export async function getCertifications() {
+  "use cache";
+  cacheLife("max");
+  cacheTag(CACHE_TAGS.certifications);
+
+  return db
+    .select()
+    .from(schema.certifications)
+    .orderBy(asc(schema.certifications.order), asc(schema.certifications.id));
+}

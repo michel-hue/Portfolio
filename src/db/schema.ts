@@ -121,6 +121,21 @@ export const experiences = pgTable("experiences", {
   order: integer("order").notNull().default(0),
 });
 
+/** Page À propos, « C — Certifications ». */
+export const certifications = pgTable("certifications", {
+  id: serial("id").primaryKey(),
+  /** Intitulé : « GitHub Actions ». */
+  name: text("name").notNull(),
+  /** Organisme : « Microsoft ». */
+  issuer: text("issuer").notNull(),
+  /** Date d'obtention, texte libre : « Novembre 2026 ». */
+  issuedAt: text("issued_at"),
+  credentialId: text("credential_id"),
+  /** Lien de vérification (Microsoft Learn, Credly…). */
+  credentialUrl: text("credential_url"),
+  order: integer("order").notNull().default(0),
+});
+
 /** Formulaire de contact. */
 export const messages = pgTable(
   "messages",
@@ -143,6 +158,7 @@ export type NewProject = typeof projects.$inferInsert;
 export type SkillGroup = typeof skillGroups.$inferSelect;
 export type Skill = typeof skills.$inferSelect;
 export type Experience = typeof experiences.$inferSelect;
+export type Certification = typeof certifications.$inferSelect;
 export type Message = typeof messages.$inferSelect;
 
 /** Essais de connexion admin ratés (blocage 10 min après 5 échecs par IP). */

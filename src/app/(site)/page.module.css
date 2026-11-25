@@ -1,75 +1,109 @@
-/* ---- Hero ---- */
+/* ---- Hero (proposition D, ordre inversé : métier puis nom) ---- */
 
 .hero {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: var(--space-12);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-8);
   padding-top: 96px;
-  padding-bottom: var(--space-32);
 }
 
-.heroText {
-  flex: 1 1 420px;
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 6px var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+}
+
+.titles {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 28px;
+  gap: var(--space-3);
 }
 
-.heroCard {
-  flex: 1 1 420px;
-  display: flex;
-}
-
-.heroCard > * {
-  flex: 1;
-}
-
-.identity {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-  border-radius: var(--radius-lg);
-  background: var(--accent);
-  color: var(--on-accent);
-  font-size: 26px;
+.job {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(26px, 4.6vw, 64px);
+  line-height: 1;
   font-weight: 600;
   letter-spacing: -0.04em;
-}
-
-.identityText {
-  display: flex;
-  flex-direction: column;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .name {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(40px, 7.2vw, 100px);
+  line-height: 1;
   font-weight: 600;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
 }
 
-.role {
-  font-size: 14px;
-  line-height: 22px;
+.heroBottom {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: var(--space-6) var(--space-12);
+  align-self: stretch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.cardLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-subtle);
 }
 
-.intro {
-  max-width: 480px;
+.cardValue {
+  margin: 2px 0 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--ink);
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 560px;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+
+@media (max-width: 760px) {
+  .heroBottom {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- À propos ---- */
@@ -143,8 +177,8 @@
 
 @media (max-width: 640px) {
   .hero {
+    gap: var(--space-6);
     padding-top: var(--space-16);
-    padding-bottom: 96px;
   }
   .aboutInner,
   .contact {

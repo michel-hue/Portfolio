@@ -15,7 +15,7 @@ export default async function AdminProjectsPage() {
     <>
       <PageHeader
         title="Projets"
-        subtitle="Glisse une ligne (ou utilise les flèches) pour changer l’ordre et la numérotation du site. Le projet 01 est affiché en grand sur l’accueil."
+        subtitle="Glisse une ligne (ou utilise les flèches) pour changer l’ordre et la numérotation du site."
         actions={
           <Link href="/admin/projets/nouveau" className={`${styles.btn} ${styles.btnPrimary}`}>
             <Plus size={16} strokeWidth={1.75} aria-hidden="true" />

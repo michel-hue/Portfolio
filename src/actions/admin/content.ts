@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { refresh, updateTag } from "next/cache";
 import { db, schema } from "@/db";
 import {
+  certificationSchema,
   experienceSchema,
   idSchema,
   invalid,
@@ -99,6 +100,31 @@ export async function deleteExperience(formData: FormData) {
   const id = idSchema.parse(formData.get("id"));
   await db.delete(schema.experiences).where(eq(schema.experiences.id, id));
   updateTag(CACHE_TAGS.experiences);
+  refresh();
+}
+
+/* ---------- Certifications ---------- */
+
+export async function saveCertification(_prev: FormState, formData: FormData): Promise<FormState> {
+  await requireAdmin();
+  const { id, error } = optionalId(formData);
+  if (error) return { ok: false, message: "Certification introuvable.", errors: {} };
+  const parsed = certificationSchema.safeParse(readForm(formData));
+  if (!parsed.success) return invalid(zodErrors(parsed.error));
+
+  if (id) await db.update(schema.certifications).set(parsed.data).where(eq(schema.certifications.id, id));
+  else await db.insert(schema.certifications).values(parsed.data);
+
+  updateTag(CACHE_TAGS.certifications);
+  refresh();
+  return saved(id ? "Certification enregistrée." : "Certification ajoutée.");
+}
+
+export async function deleteCertification(formData: FormData) {
+  await requireAdmin();
+  const id = idSchema.parse(formData.get("id"));
+  await db.delete(schema.certifications).where(eq(schema.certifications.id, id));
+  updateTag(CACHE_TAGS.certifications);
   refresh();
 }
 

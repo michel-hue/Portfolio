@@ -112,9 +112,11 @@ Les tables ne sont **jamais** synchronisées automatiquement : toute modificatio
 
 - **Connexion** : `/admin/login`. Après 5 essais ratés depuis la même adresse IP, il faut attendre 10 minutes.
 - **Projets** : création et modification de tous les champs, captures (Cloudinary), réordonnancement par
-  glisser-déposer ou flèches (l’ordre donne les numéros « 01 », « 02 »… du site ; le projet 01 est affiché en
-  grand sur l’accueil), publication.
-- **Compétences**, **Parcours**, **Profil** (textes, liens, portrait, CV en PDF), **Messages** du formulaire de contact.
+  glisser-déposer ou flèches (l’ordre donne les numéros « 01 », « 02 »… du site ; les 4 premiers apparaissent
+  sur l’accueil), publication.
+- **Compétences**, **Parcours**, **Certifications** (intitulé, organisme, date, n°, lien de vérification ; section
+  « C — Certifications » de la page À propos, masquée tant qu’elle est vide), **Profil** (textes, liens, portrait,
+  CV en PDF), **Messages** du formulaire de contact.
 - Chaque modification met le site à jour **sans redéploiement**.
 
 Fichiers acceptés : JPG, PNG, WebP (images) et PDF (CV), 5 Mo maximum. Ils sont rangés dans le dossier

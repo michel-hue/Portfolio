@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Award,
   Briefcase,
   ExternalLink,
   FolderKanban,
@@ -20,6 +21,7 @@ const LINKS = [
   { href: "/admin/projets", label: "Projets", icon: FolderKanban },
   { href: "/admin/competences", label: "Compétences", icon: Wrench },
   { href: "/admin/parcours", label: "Parcours", icon: Briefcase },
+  { href: "/admin/certifications", label: "Certifications", icon: Award },
   { href: "/admin/profil", label: "Profil", icon: User },
   { href: "/admin/messages", label: "Messages", icon: Mail },
 ] as const;

@@ -3,7 +3,6 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 import { AnimatedDot } from "@/components/site/AnimatedDot";
 import { Button } from "@/components/site/Button";
 import { Eyebrow } from "@/components/site/Eyebrow";
-import { HeroProject } from "@/components/site/HeroProject";
 import { HomeProjects } from "@/components/site/HomeProjects";
 import { Portrait } from "@/components/site/Portrait";
 import { Reveal } from "@/components/site/Reveal";
@@ -21,54 +20,64 @@ export default async function HomePage() {
     getStackSkills(),
   ]);
 
-  // Le projet 01 (ordre défini dans l'admin) est affiché en grand ; les suivants en grille.
-  const [lead, ...rest] = projects;
-  const others = rest.map(toCardProject);
+  const cards = projects.map(toCardProject);
+  const card = [
+    { label: "Basé à", value: `${profile.city}, ${profile.country}` },
+    { label: "Délai de réponse", value: `Sous ${profile.responseTime}` },
+  ];
 
   return (
     <>
-      {/* 01 — Hero */}
-      <section className={`container ${styles.hero}`}>
-        <div className={styles.heroText}>
-          <Reveal immediate className={styles.identity}>
-            <div className={styles.tile} aria-hidden="true">
-              a.
-            </div>
-            <div className={styles.identityText}>
-              <span className={styles.name}>{profile.fullName}</span>
-              <span className={styles.role}>
-                {profile.role} · {profile.city}
-              </span>
-            </div>
+      {/* 01 — Hero : métier, nom, fiche + intro */}
+      <section className={`container ${styles.hero}`} aria-labelledby="hero-title">
+        {profile.available && (
+          <Reveal immediate className={styles.status}>
+            <span className={styles.statusDot} aria-hidden="true" />
+            Disponible{profile.availableFrom ? ` · ${profile.availableFrom}` : ""}
           </Reveal>
-          <Reveal immediate as="h1" index={1} className="display">
-            {profile.heroTitle}
+        )}
+
+        <div className={styles.titles}>
+          <Reveal immediate as="p" index={1} className={styles.job}>
+            {profile.role}
+          </Reveal>
+          <Reveal immediate as="h1" index={2} id="hero-title" className={styles.name}>
+            {profile.fullName}
             <AnimatedDot />
-          </Reveal>
-          <Reveal immediate as="p" index={2} className={`body-lg ${styles.intro}`}>
-            {profile.heroIntro}
-          </Reveal>
-          <Reveal immediate index={3} className={styles.actions}>
-            <Button href="#projets" variant="primary" size="lg" iconEnd={ArrowRight}>
-              Voir les projets
-            </Button>
-            {profile.resumeUrl && (
-              <Button href={profile.resumeUrl} variant="text" iconStart={Download} external>
-                Télécharger le CV
-              </Button>
-            )}
           </Reveal>
         </div>
 
-        {lead && (
-          <Reveal immediate index={2} className={styles.heroCard}>
-            <HeroProject project={toCardProject(lead)} />
+        <div className={styles.heroBottom}>
+          <Reveal immediate as="dl" index={3} className={styles.card}>
+            {card.map((item) => (
+              <div key={item.label}>
+                <dt className={styles.cardLabel}>{item.label}</dt>
+                <dd className={styles.cardValue}>{item.value}</dd>
+              </div>
+            ))}
           </Reveal>
-        )}
+          <Reveal immediate index={4} className={styles.lead}>
+            <p className="body-lg">{profile.heroIntro}</p>
+            <div className={styles.actions}>
+              <Button href="#projets" variant="primary" size="lg" iconEnd={ArrowRight}>
+                Voir les projets
+              </Button>
+              {profile.resumeUrl ? (
+                <Button href={profile.resumeUrl} variant="outline" size="lg" iconStart={Download} external>
+                  Télécharger le CV
+                </Button>
+              ) : (
+                <Button href="/contact" variant="outline" size="lg">
+                  Me contacter
+                </Button>
+              )}
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* 02 — Projets */}
-      {others.length > 0 && <HomeProjects projects={others} />}
+      {cards.length > 0 && <HomeProjects projects={cards} />}
 
       {/* 03 — À propos */}
       <section className={styles.about} aria-labelledby="a-propos">
@@ -85,9 +94,7 @@ export default async function HomePage() {
             </Button>
             {stack.length > 0 && (
               <div className={styles.stack}>
-                <span className={styles.stackLabel}>
-                  Stack
-                </span>
+                <span className={styles.stackLabel}>Stack</span>
                 <TagList items={stack} variant="outlined" label="Stack" />
               </div>
             )}

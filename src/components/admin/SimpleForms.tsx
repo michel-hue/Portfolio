@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { saveExperience, saveSkill, saveSkillGroup } from "@/actions/admin/content";
-import type { Experience, Skill, SkillGroup } from "@/db/schema";
+import { saveCertification, saveExperience, saveSkill, saveSkillGroup } from "@/actions/admin/content";
+import type { Certification, Experience, Skill, SkillGroup } from "@/db/schema";
 import type { FormState } from "@/lib/admin-form";
 import { Checkbox, Field } from "./Field";
 import { FormNotice, SubmitButton, useAdminForm } from "./FormParts";
@@ -91,6 +91,35 @@ export function ExperienceForm({ experience }: { experience?: Experience }) {
       <div className={styles.rowActions}>
         <SubmitButton pending={pending} variant={experience ? "default" : "primary"}>
           {experience ? "Enregistrer" : "Ajouter la ligne"}
+        </SubmitButton>
+        <FormNotice state={state} />
+      </div>
+    </form>
+  );
+}
+
+/* ---------- Certifications ---------- */
+
+export function CertificationForm({ certification: c }: { certification?: Certification }) {
+  const { state, onSubmit, pending } = useAdminForm(saveCertification);
+  const ref = useResetOnSuccess(state, !c);
+  const e = state.errors;
+  return (
+    <form ref={ref} onSubmit={onSubmit} className={forms.form} noValidate>
+      {c && <input type="hidden" name="id" value={c.id} />}
+      <div className={forms.line}>
+        <Field label="Intitulé" name="name" defaultValue={c?.name} error={e.name} placeholder="GitHub Actions" className={forms.wide} />
+        <Field label="Organisme" name="issuer" defaultValue={c?.issuer} error={e.issuer} placeholder="Microsoft" className={forms.small} />
+      </div>
+      <div className={forms.line}>
+        <Field label="Date d’obtention" name="issuedAt" defaultValue={c?.issuedAt ?? ""} error={e.issuedAt} placeholder="Novembre 2026" className={forms.small} optional />
+        <Field label="N° de certificat" name="credentialId" defaultValue={c?.credentialId ?? ""} error={e.credentialId} className={forms.small} optional />
+        <Field label="Ordre" name="order" type="number" min={0} defaultValue={c?.order ?? 0} error={e.order} className={forms.tiny} />
+      </div>
+      <Field label="Lien de vérification" name="credentialUrl" type="url" defaultValue={c?.credentialUrl ?? ""} error={e.credentialUrl} placeholder="https://learn.microsoft.com/…" optional />
+      <div className={styles.rowActions}>
+        <SubmitButton pending={pending} variant={c ? "default" : "primary"}>
+          {c ? "Enregistrer" : "Ajouter la certification"}
         </SubmitButton>
         <FormNotice state={state} />
       </div>

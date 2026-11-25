@@ -155,6 +155,15 @@ export const experienceSchema = z.object({
   order: orderField,
 });
 
+export const certificationSchema = z.object({
+  name: requiredText("Intitulé", 160),
+  issuer: requiredText("Organisme", 80),
+  issuedAt: optionalText(40),
+  credentialId: optionalText(80),
+  credentialUrl: optionalUrl,
+  order: orderField,
+});
+
 export const profileSchema = z.object({
   fullName: requiredText("Nom complet", 80),
   shortName: requiredText("Logo texte", 30),

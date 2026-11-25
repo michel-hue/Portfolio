@@ -18,8 +18,7 @@ export type AdminProjectRow = {
 
 /**
  * Liste des projets : glisser-déposer (souris) ou flèches (clavier) pour réordonner.
- * L'ordre est enregistré tout de suite et sert aux numéros « 01 », « 02 »… du site ;
- * le projet 01 est affiché en grand sur l'accueil.
+ * L'ordre est enregistré tout de suite et sert aux numéros « 01 », « 02 »… du site.
  */
 export function ProjectList({ projects }: { projects: AdminProjectRow[] }) {
   const [rows, setOptimisticRows] = useOptimistic(projects);

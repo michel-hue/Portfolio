@@ -4,8 +4,8 @@ import styles from "./ProjectCover.module.css";
 type ProjectCoverProps = {
   title: string;
   coverUrl?: string | null;
-  /** Hauteur de la maquette : hero 300, home 220, list 200, detail 560, gallery 320. */
-  size: "hero" | "home" | "list" | "detail" | "gallery";
+  /** Hauteur de la maquette : home 220, list 200, detail 560, gallery 320. */
+  size: "home" | "list" | "detail" | "gallery";
   /** Texte alternatif ; par défaut « Capture du projet {title} ». */
   alt?: string;
   priority?: boolean;
